@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="brand">
+                <span class="ti-unlink"></span> 
+                <span>admin</span>
+            </h2> 
+            <label for="sidebar-toggle" class="ti-menu-alt"></label>
+        </div>
+        
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="ti-dashboard"></span>
+                        <span>DashBoard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-user"></span>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-notepad"></span>
+                        <span>Page</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('process') }}">
+                        <span class="ti-brush-alt"></span>
+                        <span>ETL</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-book"></span>
+                        <span>Contacts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('ETL') }}">
+                        <span class="ti-arrow-circle-left"></span>
+                        <span>Log out</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('login') }}">
+                        <span class="ti-arrow-circle-right"></span>
+                        <span>Log in</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    <div class="main-content">
+        
+        <header>
+            <div class="search-wrapper">
+                <span class="ti-search"></span>
+                <input type="search" placeholder="Search">
+            </div>
+            
+            <div class="social-icons">
+                <span class="ti-bell"></span>
+                <span class="ti-comment"></span>
+                <div></div>
+            </div>
+        </header>
+        
+        <main>
+            
+            <h2 class="dash-title">Overview</h2>
+            
+            <div class="dash-cards">
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-eye"></span>
+                        <div>
+                            <h5>Daily visitors</h5>
+                            <h4>30</h4>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="">View all</a>
+                    </div>
+                </div>
+                
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-id-badge"></span>
+                        <div>
+                            <h5>Registered User</h5>
+                            <h4>20</h4>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="">View all</a>
+                    </div>
+                </div>
+                
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-comments"></span>
+                        <div>
+                            <h5>New massage</h5>
+                            <h4>11</h4>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="">View all</a>
+                    </div>
+                </div> 
+            </div>
+            
+            
+            <section class="recent">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <h3>Recent activity</h3>
+                        
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Activity</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ETL</td>
+                                        <td>13:00:00 11/5/2021</td>
+                                        <td>13:02:00 11/5/2021</td>
+                                        <!--
+                                        <td class="td-team">
+                                            <div class="img-1"></div>
+                                            <div class="img-2"></div>
+                                            <div class="img-3"></div>
+                                        </td>-->
+                                        <td>
+                                            <span class="badge success">Success</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Import</td>
+                                        <td>14:00:00 11/5/2021</td>
+                                        <td>14:30:00 11/5/2021</td>
+                                        <td>
+                                            <span class="badge warning">Processing</span>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="summary">
+                        <div class="summary-card">
+                            <div class="summary-single">
+                                <span class="ti-id-badge"></span>
+                                <div>
+                                    <h5>196</h5>
+                                    <small>Number of staff</small>
+                                </div>
+                            </div>
+                            <div class="summary-single">
+                                <span class="ti-calendar"></span>
+                                <div>
+                                    <h5>16</h5>
+                                    <small>Number of leave</small>
+                                </div>
+                            </div>
+                            <div class="summary-single">
+                                <span class="ti-face-smile"></span>
+                                <div>
+                                    <h5>12</h5>
+                                    <small>Profile update request</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bday-card">
+                            <div class="bday-flex">
+                                <div class="bday-img"></div>
+                                <div class="bday-info">
+                                    <h5>Dwayne F. Sanders</h5>
+                                    <small>Birthday Today</small>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button>
+                                    <span class="ti-gift"></span>
+                                    Wish him
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+            
+        </main>
+        
+    </div>
+    
+</body>
+</html>
